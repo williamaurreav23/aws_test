@@ -1,0 +1,63 @@
+syntax = "proto3";
+package miniforum;
+
+// The forum service definition.
+service MiniforumService {
+  // Existing methods
+  rpc AddMessage (Message) returns (AddMessageResponse) {}
+  rpc ListMessages (ListMessagesRequest) returns (ListMessagesResponse) {}
+  rpc ListMessagesByUser (ListMessagesByUserRequest) returns (ListMessagesResponse) {}
+  rpc AddMessageToUser (MessageToUser) returns (AddMessageResponse) {}
+
+  // New methods for user management and notifications
+  rpc RegisterUser (RegisterUserRequest) returns (RegisterUserResponse) {}
+  rpc LoginUser (LoginUserRequest) returns (LoginUserResponse) {}
+  rpc NotifyUserNewMessages (NotifyUserNewMessagesRequest) returns (NotifyUserNewMessagesResponse) {}
+}
+
+// Existing messages
+message Message {
+  string user = 1;
+  string text = 2;
+}
+message AddMessageResponse {
+  bool success = 1;
+}
+message ListMessagesRequest {}
+message ListMessagesByUserRequest {
+  string user = 1;
+}
+message MessageToUser {
+  string from_user = 1;
+  string to_user = 2;
+  string text = 3;
+}
+message ListMessagesResponse {
+  repeated Message messages = 1;
+}
+
+// New messages for user management and notifications
+message RegisterUserRequest {
+  string username = 1;
+  string password = 2;
+  string email = 3; // Assuming email is required for registration
+}
+message RegisterUserResponse {
+  bool success = 1;
+  string message = 2; // Optional message field for additional information (e.g., error messages)
+}
+message LoginUserRequest {
+  string username = 1;
+  string password = 2;
+}
+message LoginUserResponse {
+  bool success = 1;
+  string message = 2; // Optional message field for additional information
+}
+message NotifyUserNewMessagesRequest {
+  string username = 1;
+}
+message NotifyUserNewMessagesResponse {
+  int32 new_messages_count = 1;
+  repeated string new_messages_preview = 2; // Optional, could contain previews of the new messages
+}

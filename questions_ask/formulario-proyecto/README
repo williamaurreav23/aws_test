@@ -1,0 +1,59 @@
+TypeScript Form Project
+
+Basic web form in TypeScript using the Express framework. When the form is submitted, the information is printed to the server console.
+
+Project structure
+
+Copy code
+project-form/
+├── src/
+│ └── app.ts # Main server code in TypeScript
+├── views/
+│ └── form.html # HTML form
+├── dist/ # TypeScript output folder (generated on build)
+├── package.json # Configuration file for dependencies and scripts
+└── tsconfig.json # TypeScript configuration
+Prerequisites
+Node.js (v14 or higher)
+npm (Node.js package manager)
+Installation
+Clone the project or create a new folder.
+
+attempt
+
+Copy code
+git clone <repository-url> project-form
+cd project-form
+Install dependencies .
+
+attempt
+
+Copy code
+npm install
+TypeScript Configuration
+This project uses TypeScript and Express. The configuration is located in the tsconfig.json file and is ready to be compiled in the dist directory.
+
+Running the project
+To start the project, you have two options:
+
+Development mode (auto-reload):
+
+attempt
+
+Copy code
+npm run dev
+Production mode :
+
+attempt
+
+Copy code
+npm start
+Using the project
+Open the browser and navigate to http://localhost:3000 .
+Fill out the form and submit it.
+The submitted responses will be displayed in the server console.
+Available Scripts
+npm start: Builds the project and runs the compiled code in production.
+npm run dev: Builds the project and runs the server in development mode with auto-reload (uses nodemon).
+Customization
+You can modify the views/form.html form to add or remove fields, and customize the handling of app.ts responses within the /submit path.

@@ -1,0 +1,14 @@
+version: 1.2
+
+phases:
+  install:
+    runtime-versions:
+      docker: 19
+  build:
+    commands:
+      - echo "Building application..."
+      # Comandos para construir la aplicación
+  post_build:
+    commands:
+      - echo "Deploying application to EKS..."
+      # Comandos para desplegar la aplicación en EKS
