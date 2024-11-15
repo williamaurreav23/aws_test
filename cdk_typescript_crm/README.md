@@ -1,10 +1,9 @@
-# React Redux CRM
+# mini crm cutom for demo propuses 
 
-> A reusable CRM project for real-world business based on React 16, React-Redux & Material-UI 4
+> A mini crm on  React 16, React-Redux & Material-UI 4
 
-This is the very first version, feel free to use for any app. Contributions are always welcome!
-
-The goal of this starter project is to create reusable project for real-world business. To achieve this target, we need a solution which should include simple authentication process, restful API with token support and simple but elegant UI design.
+for demostration propuses this material is de show several skills that i got in react i participate in the original project call 
+https://github.com/harryho/react-crm  but in separetly 
 
 ### Features
 
@@ -16,21 +15,16 @@ The goal of this starter project is to create reusable project for real-world bu
 - Integrate with storybook for react.
 - The project is built on TypeScript 3.x
 - ~~Use Formsy to manage form submission~~
-- ~~To simulate real-world business, this starter project chooses Json-Server as fake Restful API. (You can simple replace it with your own API)~~
 
-### Live Demo
-
-[Demo](https://react-app-demo.harryho.org) The demo is just a proof of concept. It doesn't have back-end API and all features of master branch.
 
 ### Screenshots
 
 ![Screenshot1](screenshots/screenshot-1.jpg)
 
-![Screenshot2](screenshots/screenshot-1.1.jpg)
 
 ![Screenshot3](screenshots/screenshot-3.1.jpg)
 
-<!-- ![Screenshot4](screenshots/screenshot-4.jpg) -->
+
 
 ----
 
@@ -43,11 +37,10 @@ Storybook
 
 ```bash
 # Clone project
-git clone https://github.com/harryho/react-crm.git
+git clone 
 
 
 # install the packages with npm
-cd react-crm
 npm install
 
 # start the server with hot reload at localhost:4000
@@ -90,19 +83,19 @@ docker run -d --publish 8080:80  --name rc2 rc-prd:2.0
 docker logs rc2  -f
 ```
 
-## Welcome to fork or clone
+#  deploy with CDK aws 
 
-For detailed explanation on how things work, checkout following links please.
+for deploy with that you need to have inside the aws cdk for node 
 
-- [React](https://facebook.github.io/react/)
-- [Redux](http://redux.js.org/)
-- [Material-UI](http://www.material-ui.com/)
+execute a 
+#npm build 
 
-### Alternatives
+for compile a package 
 
-There are another two similar projects respectively built on the Vue.js and Angular. If you have interests in those technical stacks. You can find and clone those repositories below.
 
-- [Ng-MD-App](https://github.com/harryho/ng-md-app.git).
-- [Ng4Crm](https://github.com/harryho/ng4crm.git). (It is no longer maintained with latest Angular)
-- [Vue-Crm](https://github.com/harryho/vue-crm.git).
 
+next you can run 
+
+npm run cdk:deploy 
+
+for run this into aws cloud 
