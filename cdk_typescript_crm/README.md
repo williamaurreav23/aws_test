@@ -106,17 +106,3 @@ There are another two similar projects respectively built on the Vue.js and Angu
 - [Ng4Crm](https://github.com/harryho/ng4crm.git). (It is no longer maintained with latest Angular)
 - [Vue-Crm](https://github.com/harryho/vue-crm.git).
 
-### Change log
-
-- May 2020 -  Merge the branch rctsx to master
-
-  After the merge, the whole project moved to new techncial stack - TypeScript 3. Also, the Material-UI is upgraded to 4.x version.
-
-
-- Dec 2018 - Rebase demo branch to master
-
-  New master doesn't rely on Json-Server as fake API. It will only have Readonly fake API. It means any new or updated data will be stored to any physical file. All test data will be rolled back after system restart.
-
-- May 2018 -  Create an archived branch json-server
-
-  This branch was the master which used Json-Server as fake API. Considering the hiccup of setting Json-Server up and maintenance, it will be replaced by fake service ( Readonly fake API). You still can find clone this branch by branch name **json-server**, but it will be no longer updated. It is an archived branch.
